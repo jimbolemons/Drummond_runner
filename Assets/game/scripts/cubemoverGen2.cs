@@ -7,7 +7,7 @@ public class cubemoverGen2 : MonoBehaviour {
    
     private int lane = 2;
 	private float positionX = 0;
-	private float positionY = 0;
+	private float positionY = .5f;    
 
     private float positionZ = 0;
     private float rotationY = 0;
@@ -82,14 +82,13 @@ public class cubemoverGen2 : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.Space))
                     {
-                    if (positionY == 0)
+                    if (positionY == .5f)
                     {
                         Yvel = jumpPower;
 
                     }
 
-                }
-                
+                }                
 
                 break;
             case MOVE_LEFT:
@@ -100,19 +99,17 @@ public class cubemoverGen2 : MonoBehaviour {
             case MOVE_RIGHT:
                 positionZ -= movement;
                 state = IDLE;
-                break;
-
-                  
+                break;       
 
            
         }
         Yvel += Yacc;
         positionY += Yvel;
 
-        if (positionY <= 0)
+        if (positionY <= .5f)
         {
             Yvel = 0;
-            positionY = 0;
+            positionY = .5f;
 
            }
        

@@ -16,7 +16,7 @@ public class SceneController : MonoBehaviour
     {
         if (chunks.Count > 0)
         { 
-            if (player.position.z - chunks[0].transform.position.z > 10)
+            if (player.position.x - chunks[0].transform.position.x > 20)
             {
                 Destroy(chunks[0]);
                 chunks.RemoveAt(0); //removes the array
@@ -29,7 +29,7 @@ public class SceneController : MonoBehaviour
             {
                position = chunks[chunks.Count - 1].transform.Find("Connector").position;
             }
-            GameObject obj = Instantiate(prefabTrackChunk, position, Quaternion.identity);
+            GameObject obj = Instantiate(prefabTrackChunk, position, Quaternion.Euler(0,90,0));
 
             chunks.Add(obj);
             //spawn new chunk...

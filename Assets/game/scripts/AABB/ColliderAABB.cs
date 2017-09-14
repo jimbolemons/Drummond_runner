@@ -38,6 +38,19 @@ public class ColliderAABB : MonoBehaviour {
         if (min.z > other.max.z) return false;
         if (max.z < other.min.z) return false;
 
+
+        //float moveForword = other.maxz - min.z;
+
+        //vector3 solution;
+
+        //solution.z = mathf.Abs(moveForword) < mathf.Abs(moveBack) ? moveforward :moveback;
+
+        //if (mathf.abs(soulution.z)> math.abs(solution.x) || mathf.abs(solution.z)> mathf.abs(solution.y))solution.z=0;
+
+        // return solution;
+
+
+
         return true;
     }
 
