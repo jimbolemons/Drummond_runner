@@ -21,7 +21,7 @@ public class CubeMover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        
+
             // if D key is pressed down
             if (Input.GetKeyDown(KeyCode.W))
             {

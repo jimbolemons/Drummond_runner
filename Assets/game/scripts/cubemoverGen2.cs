@@ -6,22 +6,27 @@ public class cubemoverGen2 : MonoBehaviour {
 
    
     private int lane = 2;
-    private int positionX = 0;
-    private int positionY = 0;
+	private float positionX = 0;
+	private float positionY = 0;
 
     private float positionZ = 0;
     private float rotationY = 0;
+
+	private float Yacc = -.1f;
+	private float Yvel = 0;
   
-    public int jumpPower = 1;
-    public int movement = 1;
+    public float jumpPower = .6f;
+    public int movement = 0;
+	public float speed = 3;
     //private int speed;
 
     const int IDLE = 0;
     const int MOVE_LEFT = 1;
     const int MOVE_RIGHT = 2;
     const int JUMP = 3;
+
    
-    const int GRAVITY = 1;
+    const float GRAVITY = .1f;
     private int state = 0;
 
     void Start()
@@ -37,7 +42,8 @@ public class cubemoverGen2 : MonoBehaviour {
            
         switch (state)
         {
-            case IDLE:                
+            case IDLE:          
+			positionX += speed * Time.deltaTime;
                 if (Input.GetKeyDown(KeyCode.W))
                 {
                     if (lane == 3)
@@ -76,9 +82,11 @@ public class cubemoverGen2 : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.Space))
                     {
-                     state = JUMP;
-                     positionY = jumpPower;
-                    }
+                     
+				positionY += Yvel;
+					Yvel += Yacc;
+                    state = JUMP;
+                }
                 
 
                 break;
@@ -93,7 +101,10 @@ public class cubemoverGen2 : MonoBehaviour {
                 break;
 
             case JUMP:
-                positionY -= GRAVITY;
+               positionY -= GRAVITY;
+                Yvel = jumpPower;
+
+
                 if (positionY <= 0)
                     {
                      positionY = 0;
