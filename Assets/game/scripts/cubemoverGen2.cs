@@ -15,7 +15,7 @@ public class cubemoverGen2 : MonoBehaviour {
 	private float Yacc = -.1f;
 	private float Yvel = 0;
   
-    public float jumpPower = .6f;
+    public float jumpPower = 2f;
     public int movement = 0;
 	public float speed = 3;
     //private int speed;
@@ -23,7 +23,7 @@ public class cubemoverGen2 : MonoBehaviour {
     const int IDLE = 0;
     const int MOVE_LEFT = 1;
     const int MOVE_RIGHT = 2;
-    const int JUMP = 3;
+    
 
    
     const float GRAVITY = .1f;
@@ -82,10 +82,12 @@ public class cubemoverGen2 : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.Space))
                     {
-                     
-				positionY += Yvel;
-					Yvel += Yacc;
-                    state = JUMP;
+                    if (positionY == 0)
+                    {
+                        Yvel = jumpPower;
+
+                    }
+
                 }
                 
 
@@ -100,20 +102,20 @@ public class cubemoverGen2 : MonoBehaviour {
                 state = IDLE;
                 break;
 
-            case JUMP:
-               positionY -= GRAVITY;
-                Yvel = jumpPower;
-
-
-                if (positionY <= 0)
-                    {
-                     positionY = 0;
-                     state = IDLE;
-                    }
-                break;         
+                  
 
            
         }
+        Yvel += Yacc;
+        positionY += Yvel;
+
+        if (positionY <= 0)
+        {
+            Yvel = 0;
+            positionY = 0;
+
+           }
+       
 
         transform.position = new Vector3(positionX, positionY, positionZ);       
         transform.Rotate(0, rotationY, 0);
