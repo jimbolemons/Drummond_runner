@@ -11,26 +11,17 @@ public class cubemoverGen2 : MonoBehaviour {
 	private float positionY = .5f;  
     private float positionZ = 0;
     private float rotationY = 0;
-<<<<<<< Updated upstream
-    static public int score = 0;
-    static public int life = 10;
-
-=======
 	//the players score
     static public int score = 0;
 	//the players life
     static public int life = 10;
 	//gravity
->>>>>>> Stashed changes
     private float Yacc = -.025f;
 	private float Yvel = 0;
   //jump impulse
     public float jumpPower = 2f;
     public int movement = 0;
-<<<<<<< Updated upstream
-=======
 	//players speed
->>>>>>> Stashed changes
 	static public float speed = 15;
 
 
@@ -47,16 +38,9 @@ public class cubemoverGen2 : MonoBehaviour {
 
     }
 
-<<<<<<< Updated upstream
-    void Update()
-    {          
-        switch (state)
-        {
-=======
     void Update(){          
         switch (state){
 		//uses state mechine to detetmin what the player will do during this update
->>>>>>> Stashed changes
             case IDLE:          
 			positionX += speed * Time.deltaTime;
 			//checks to see if the player is pressing W

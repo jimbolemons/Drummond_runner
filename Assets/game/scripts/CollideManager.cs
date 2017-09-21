@@ -4,22 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CollideManager : MonoBehaviour {
-<<<<<<< Updated upstream
-
-    public AudioClip wallHit;
-    public AudioClip powerUpHit;
-
-    public AABBCollider player;
-
-   
-=======
 	//audio clips for collitions
     public AudioClip wallHit;
     public AudioClip powerUpHit;
 	//
     public AABBCollider player;
    //creates two lists for the powerups and walls
->>>>>>> Stashed changes
     static public List<AABBCollider> walls = new List<AABBCollider>();
     static public List<AABBCollider> powerups = new List<AABBCollider>();
 
@@ -27,70 +17,6 @@ public class CollideManager : MonoBehaviour {
 	}	
 
 	void LateUpdate () {
-<<<<<<< Updated upstream
-        DoCollisionDetectionWalls();
-        DoCollisionDetectionPowerups();
-    }
-
-    private void DoCollisionDetectionWalls()
-    {
-        for (int i = walls.Count - 1; i >= 0; i--)
-        {
-            if(walls[i].CheckOverlap(player))
-            {
-                Destroy(walls[i].gameObject);
-                cubemoverGen2.life--;
-                cubemoverGen2.speed--;
-             print(cubemoverGen2.life);
-                if (cubemoverGen2.life <= 0) {
-
-                    SceneManager.LoadScene("Gameover");
-
-
-                }
-           AudioSource.PlayClipAtPoint(wallHit, transform.position);
-            }
-
-        }
-       
-    }
-
-    private void DoCollisionDetectionPowerups()
-    {
-        for (int i = powerups.Count - 1; i >= 0; i--)
-        {
-            
-                if (powerups[i].CheckOverlap(player))
-                {
-               
-                 int type = powerups[i].GetComponent<PowerTime>().type ;
-
-                if (type == 0)
-                {
-                   
-                    cubemoverGen2.speed +=2;
-                    cubemoverGen2.score++;
-
-                }
-                else if (type == 1)
-                {
-                    cubemoverGen2.life++;
-                    cubemoverGen2.score++;          
-
-                }
-                else {
-
-                    cubemoverGen2.score += 5;
-
-                }
-                print(cubemoverGen2.speed);
-
-
-
-            Destroy(powerups[i].gameObject);
-               
-
-=======
 		//calls for the colitions detection to be done
         DoCollisionDetectionWalls();
         DoCollisionDetectionPowerups();
@@ -134,7 +60,6 @@ public class CollideManager : MonoBehaviour {
                 }
                 print(cubemoverGen2.speed);
            	    Destroy(powerups[i].gameObject);  
->>>>>>> Stashed changes
                 AudioSource.PlayClipAtPoint(powerUpHit, transform.position);
                 
             }

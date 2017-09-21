@@ -13,21 +13,14 @@ public class AABBCollider : MonoBehaviour {
 	void Update () {
         CalcEdges();
     }
-<<<<<<< Updated upstream
-
-=======
 	//calculates eges of teh objects based on their half sizes
->>>>>>> Stashed changes
     void CalcEdges()
     {
         min = transform.position - halfSize;
         max = transform.position + halfSize;
     }
 
-<<<<<<< Updated upstream
-=======
 	//checks for collition
->>>>>>> Stashed changes
     public bool CheckOverlap(AABBCollider other)
     {
         if (min.x > other.max.x) return false;
