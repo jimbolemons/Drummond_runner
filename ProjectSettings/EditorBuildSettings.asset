@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/game/ColorRun.unity
+    guid: b39d1de6902e88b499debcc059fafecd
+  - enabled: 1
+    path: Assets/game/Gameover.unity
+    guid: 0fc65e2b03d8f7641a7e538a9ecf81ea
