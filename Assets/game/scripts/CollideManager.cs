@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollidingManager : MonoBehaviour {
+public class CollideManager : MonoBehaviour {
 
     public AudioClip wallHit;
     public AudioClip powerUpHit;
@@ -13,12 +13,8 @@ public class CollidingManager : MonoBehaviour {
     static public List<AABBCollider> walls = new List<AABBCollider>();
     static public List<AABBCollider> powerups = new List<AABBCollider>();
 
-
-
-    void Start () {
-		
-	}
-	
+    void Start () {		
+	}	
 
 	void LateUpdate () {
         DoCollisionDetectionWalls();
@@ -49,8 +45,6 @@ public class CollidingManager : MonoBehaviour {
             
                 if (powerups[i].CheckOverlap(player))
                 {
-
-
                
                  int type = powerups[i].GetComponent<PowerTime>().type ;
 
@@ -64,13 +58,11 @@ public class CollidingManager : MonoBehaviour {
                 else if (type == 1)
                 {
                     cubemoverGen2.life++;
-                    cubemoverGen2.score++;
-
-
-                   
+                    cubemoverGen2.score++;          
 
                 }
                 else {
+
                     cubemoverGen2.score += 5;
 
                 }

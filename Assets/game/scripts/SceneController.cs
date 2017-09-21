@@ -19,7 +19,7 @@ public class SceneController : MonoBehaviour
             if (player.position.x - chunks[0].transform.position.x > 20)
             {
                 Destroy(chunks[0]);
-                chunks.RemoveAt(0); //removes the array
+                chunks.RemoveAt(0); 
             }
         }
         while (chunks.Count < 5)
@@ -36,8 +36,7 @@ public class SceneController : MonoBehaviour
             {
                 obj.GetComponent<ObjectSpawning>().spawnObjects();
             }
-            //spawn new chunk...
-            //spawn next 10 meters of the track
+            
 
 
         }

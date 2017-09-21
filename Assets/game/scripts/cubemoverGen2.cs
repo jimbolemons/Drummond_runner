@@ -20,7 +20,7 @@ public class cubemoverGen2 : MonoBehaviour {
     public float jumpPower = 2f;
     public int movement = 0;
 	static public float speed = 15;
-    //private int speed;
+
 
     const int IDLE = 0;
     const int MOVE_LEFT = 1;
@@ -37,11 +37,7 @@ public class cubemoverGen2 : MonoBehaviour {
     }
 
     void Update()
-    {
-        
-        //bool leftClick = Input.GetMouseButton(0);
-       // bool rightClick = Input.GetMouseButton(1);    
-           
+    {          
         switch (state)
         {
             case IDLE:          

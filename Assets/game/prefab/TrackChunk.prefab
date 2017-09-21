@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c53347ea4f5f6304dbb29a8219ca9b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topLaneOneSpawnPoint: {fileID: 1153034279005264}
-  middleLaneOneSpawnPoint: {fileID: 1715616579644880}
-  bottomLaneOneSpawnPoint: {fileID: 1517265026182060}
+  topSpawnPoint: {fileID: 1153034279005264}
+  middleSpawnPoint: {fileID: 1715616579644880}
+  bottomSpawnPoint: {fileID: 1517265026182060}
   Wall1: {fileID: 1282026009357554, guid: 6f1fb88d84ef05e469e3da22163f7b57, type: 2}
   Wall2: {fileID: 1282026009357554, guid: 611ee9bf82790d946952a5b53e2b31a9, type: 2}
   Wall3: {fileID: 1282026009357554, guid: 965bbc8035cb844479e9fc751d877160, type: 2}

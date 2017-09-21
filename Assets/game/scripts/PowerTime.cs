@@ -7,11 +7,11 @@ public class PowerTime : MonoBehaviour {
    public int type;
 
     void Start () {
-        CollidingManager.powerups.Add(GetComponent<AABBCollider>());
+        CollideManager.powerups.Add(GetComponent<AABBCollider>());
     }	
 	
 	void OnDestroy () {
-        CollidingManager.powerups.Remove(GetComponent<AABBCollider>());
+        CollideManager.powerups.Remove(GetComponent<AABBCollider>());
 
     }
   

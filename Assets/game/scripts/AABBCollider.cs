@@ -9,7 +9,7 @@ public class AABBCollider : MonoBehaviour {
 
     public Vector3 halfSize;
 	
-	// Update is called once per frame
+
 	void Update () {
         CalcEdges();
     }
