@@ -11,13 +11,15 @@ public class cubemoverGen2 : MonoBehaviour {
 
     private float positionZ = 0;
     private float rotationY = 0;
+    static public int score = 0;
+    static public int life = 10;
 
-	private float Yacc = -.1f;
+    private float Yacc = -.025f;
 	private float Yvel = 0;
   
     public float jumpPower = 2f;
     public int movement = 0;
-	public float speed = 3;
+	static public float speed = 15;
     //private int speed;
 
     const int IDLE = 0;
@@ -26,7 +28,7 @@ public class cubemoverGen2 : MonoBehaviour {
     
 
    
-    const float GRAVITY = .1f;
+    const float GRAVITY = .05f;
     private int state = 0;
 
     void Start()

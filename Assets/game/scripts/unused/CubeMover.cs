@@ -8,7 +8,7 @@ public class CubeMover : MonoBehaviour {
     /// <summary>
     /// Velocity is measured in meters per second.
     /// </summary>
-    Vector3 velocity = new Vector3();
+  //  Vector3 velocity = new Vector3();
     public int speed = 10;
     public float MoveDistance = 1;
     private int playerPosition = 1;

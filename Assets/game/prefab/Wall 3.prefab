@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114948984830592862}
   - component: {fileID: 114551049363095354}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f8f0d12ee71e78d429d745b57ad1ab79, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d26d313a3c60b4e8a197104e582027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  walltype: 0
 --- !u!114 &114948984830592862
 MonoBehaviour:
   m_ObjectHideFlags: 1

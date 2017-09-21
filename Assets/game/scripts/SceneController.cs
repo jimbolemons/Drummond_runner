@@ -32,6 +32,10 @@ public class SceneController : MonoBehaviour
             GameObject obj = Instantiate(prefabTrackChunk, position, Quaternion.Euler(0,90,0));
 
             chunks.Add(obj);
+            if (chunks.Count >= 3)
+            {
+                obj.GetComponent<ObjectSpawning>().spawnObjects();
+            }
             //spawn new chunk...
             //spawn next 10 meters of the track
 

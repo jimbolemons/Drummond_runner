@@ -264,7 +264,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2c8f8613281778f478655ee9e6c77920, type: 2}
+  - {fileID: 2100000, guid: 57dd3ec878c3c4948a3982ba82797d1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -328,7 +328,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 23451e7e60e547f4fb21b7e76efcef5e, type: 2}
+  - {fileID: 2100000, guid: 57dd3ec878c3c4948a3982ba82797d1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -406,12 +406,4 @@ MonoBehaviour:
   topLaneOneSpawnPoint: {fileID: 1153034279005264}
   middleLaneOneSpawnPoint: {fileID: 1715616579644880}
   bottomLaneOneSpawnPoint: {fileID: 1517265026182060}
-  Wall1: {fileID: 1282026009357554, guid: 6f1fb88d84ef05e469e3da22163f7b57, type: 2}
-  Wall2: {fileID: 1282026009357554, guid: 611ee9bf82790d946952a5b53e2b31a9, type: 2}
-  Wall3: {fileID: 1282026009357554, guid: 965bbc8035cb844479e9fc751d877160, type: 2}
-  ScorePowerUp: {fileID: 1589118711021868, guid: 6757d3cd2758ec941bd37b41c3146355,
-    type: 2}
-  LifePowerUp: {fileID: 1589118711021868, guid: 8601a71168191de4c8cd9747ac2daba6,
-    type: 2}
-  SpeedPowerUp: {fileID: 1589118711021868, guid: 97d6047840d0c94439d231c48aaee43a,
-    type: 2}
+  Wall: {fileID: 1282026009357554, guid: 386d73c58a285594f95083bbc03cc9c3, type: 2}
